@@ -1,0 +1,21 @@
+<html>
+<script>
+    let dem = 0;
+    //x se chay den vo cuc
+    for(let x=2; dem<30;x++){
+        let kq = true;
+        for(let j=2;j<x;j++){
+            if(x%j==0){
+                kq = false;
+            }
+        }
+        if(kq){
+            dem++;
+            document.write(x +'<br>');
+        }
+    }
+
+   
+</script>
+
+</html>

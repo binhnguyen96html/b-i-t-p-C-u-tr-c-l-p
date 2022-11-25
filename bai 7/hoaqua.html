@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp">
+    <button onclick="tinh()">Xem gia</button>
+    <h3 id="rs"></h3>
+
+    <script>
+        function tinh(){
+            let n = document.getElementById('inp').value.toLowerCase();
+            let g = '';
+            if(n =="oi"){
+                g = '2000 VND/KG';
+            } else if(n == 'dua hau'){
+                g = '3000 VND/KG';
+            } else if(n == ' ta0'){
+                g = '5000 VND/KG'
+            }
+            document.getElementById('rs').innerHTML = g;
+        }
+    </script>
+</body>
+</html>

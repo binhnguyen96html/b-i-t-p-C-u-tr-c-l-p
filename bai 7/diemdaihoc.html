@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tinh diem DH khoi D</h1>
+    Mon Toan: <input type="text" id="math1"> <br>
+    Mon Van: <input type="text" id="lit1"> <br>
+    Mon Anh: <input type="text" id="eng1"><br>
+    Khu Vuc: 
+    <select name="" id="area">
+        <option value="a">KV1</option>
+        <option value="b">KV2</option>
+        <option value="c">KV2-NT</option>
+        <option value="d">KV3</option>
+    </select> <br>
+    <button onclick="finalGrade()">Tinh diem</button> <br>
+    <h1 id="output">Ket qua: </h1>
+
+    <script>
+        function finalGrade(){
+
+            let math1 = +document.getElementById('math1').value;
+            let lit1 = +document.getElementById('lit1').value;
+            let eng1 = +document.getElementById('eng1').value;
+            let select = document.getElementById('area').value;
+            let total;
+            let output = document.getElementById("output");
+
+            if(select == "a"){
+                total = math1 + lit1 + eng1 + 0.75;
+            }
+            if(select == "b"){
+                total = math1 + lit1 + eng1 + 0.5;
+            }
+            if(select == "c"){
+                total = math1 + lit1 + eng1 + 0.25;
+            }
+            if(select == "d"){
+                total = math1 + lit1 + eng1;
+            }
+            output.innerHTML = `Tong diem: ${total}`; 
+
+        }
+    </script>
+</body>
+</html>

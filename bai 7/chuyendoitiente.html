@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Amount: <input type="text" id="inputValue">
+    From currency: 
+    <select name="" id="select1">
+        <option value="a">VND</option>
+        <option value="b">USD</option>
+    </select>
+    To currency: 
+    <select name="" id="select2">
+        <option value="a">VND</option>
+        <option value="b">USD</option>
+    </select>
+    <button onclick="convert()">Convert</button>
+
+    <h1 id="result"></h1>
+
+   <script>
+    function convert(){
+        let input = document.getElementById('inputValue').value;
+        let select1 = document.getElementById('select1').value;
+        let select2 = document.getElementById('select2').value;
+        let output;
+        let result = document.getElementById('result');
+
+        if(select1 == select2){
+            output = input;
+            result.innerHTML = `Result: ${output} `;
+        }
+        if(select1 == 'a' && select2 == 'b'){
+            output = Math.round(input/24000);
+            result.innerHTML = `Result: ${output} VND`;
+        }
+        if(select1 == 'b' && select2 == 'a'){
+            output = input*24000;
+            result.innerHTML = `Result: $${output}`;
+        }
+
+    }
+    </script>
+</body>
+</html>

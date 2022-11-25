@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Nhap nam duong lich:<input type="numer" id="year1"> <br><br>
+    <button onclick="timNamAL()"> Tim nam am lich</button><br><br>
+    Ket qua nam am lich: <h1 id="output"></h1>
+
+    <script>
+
+        function timNamAL() {
+            let year1 = document.getElementById('year1').value;
+            console.log(year1);
+            let output = document.getElementById("output");
+
+            let n1 = String(year1 % 10);
+            
+            let can;
+            switch (n1) {
+                case "0":
+                    can = "Canh";
+                    break;
+
+                case "1":
+                    can = "Tan";
+                    break;
+
+                case "2":
+                    can = "Nham";
+                    break;
+
+                case "3":
+                    can = "Quy";
+                    break;
+
+                case "4":
+                    can = "Giap";
+                    break;
+
+                case "5":
+                    can = "At";
+                    break;
+
+                case "6":
+                    can = "Binh";
+                    break;
+
+                case "7":
+                    can = "Dinh";
+                    break;
+
+                case "8":
+                    can = "Mau";
+                    break;
+
+                case "9":
+                    can = "Ky";
+                    break;
+
+                default:
+                    break;
+            }
+
+
+            let n2 = String(year1 % 12);
+            let chi;
+            switch (n2) {
+                case "0":
+                    chi = "Than";
+                    break;
+
+                case "1":
+                    chi = "Dau";
+                    break;
+
+                case "2":
+                    chi = "Tuat";
+                    break;
+
+                case "3":
+                    chi = "Hoi";
+                    break;
+
+                case "4":
+                    chi = "Ty";
+                    break;
+
+                case "5":
+                    chi = "Suu";
+                    break;
+
+                case "6":
+                    chi = "Dan";
+                    break;
+
+                case "7":
+                    chi = "Meo";
+                    break;
+
+                case "8":
+                    chi = "Thin";
+                    break;
+
+                case "9":
+                    chi = "Ty";
+                    break;
+
+                case "10":
+                    chi = "Ngo";
+                    break;
+
+                case "11":
+                    chi = "Mui";
+                    break;
+
+                default:
+                    break;
+            }
+
+            let result = can + " " + chi;
+            output.innerHTML = result;
+
+        }
+    </script>
+</body>
+
+</html>
