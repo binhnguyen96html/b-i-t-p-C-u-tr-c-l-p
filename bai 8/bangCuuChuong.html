@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+
     <script>
-        for (let i = 2; i<= 9; i++){
-            for(let j = 1; j <= 10; j++){
-                document.write(i + "x" + j + "=" + i*j + "<br>")
+        function tableCreate() {
+            const body = document.body,
+                tbl = document.createElement('table');
+            tbl.style.width = '200px';
+            tbl.style.border = '1px solid black';
+
+            for (let i = 1; i < 10; i++) {
+                const tr = tbl.insertRow();
+                for (let j = 1; j < 10; j++) {
+
+                    const td = tr.insertCell();
+                    td.appendChild(document.createTextNode(`${i}x${j}=${i*j}`));
+                    td.style.border = '1px solid black';
+                }
             }
-            document.write("<br>");
+            body.appendChild(tbl);
         }
+
+        tableCreate();
+
     </script>
 </body>
+
 </html>
