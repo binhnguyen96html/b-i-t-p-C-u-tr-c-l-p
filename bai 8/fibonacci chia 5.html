@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        //BAI4 
+
+        //CACH 1
+        // let st1 = 0;
+        // let st2 = 1;
+        // let sum = 0;
+        // let n=0;
+
+        // for(let i=0; n<1; i++){
+        //     sum = st1+st2;
+        //     st1=st2;
+        //     st2=sum;
+        //     if(st2%5==0){
+        //         document.write(st2);
+        //         n=1;
+        //     }
+        // }
+
+        //CACH 2
+        // let st1 = 0;
+        // let st2 = 1;
+        // let sum = 0;
+        // while (st2 % 5 != 0) {
+        //     //1+1, 1+2, 2+3,5+3
+        //     sum = st1 + st2;
+        //     //1, 2,3,5
+        //     st1 = st2;
+        //     //2, 3, 5,13
+        //     st2 = sum;
+        // }
+        // document.write(st2);
+
+
+        //BAI 3, BAI 5
+        let st1 = 0;
+        let st2 = 1;
+        let sum = 0;
+        let n = 0;
+        let total = 0;
+        document.write(st1 + " " + "<br>");
+        document.write(st2 + " " + "<br>");
+
+        while (n < 18) {
+            //1+1, 1+2, 2+3,5+3
+            sum = st1 + st2;
+            //1, 2,3,5
+            st1 = st2;
+            //2, 3, 5,13
+            st2 = sum;
+            n++;
+            total += st2;
+            document.write(st2 + '<br>');
+        }
+        document.write("<br> Tong 20 fibonacci dau tien: " + total);
+
+
+    </script>
+</body>
+
+</html>

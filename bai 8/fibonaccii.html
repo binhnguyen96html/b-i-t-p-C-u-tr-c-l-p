@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // 1 1 2 3 4 5 13
+        let st1 = 0;
+        let st2 = 1;
+        let sum = 0;
+        let dem = 1;
+        document.write(st1 + " ");
+        document.write(st2 + " ");
+
+
+        while (dem <= 20) {
+            //1+1, 1+2, 2+3,5+3
+            sum = st1 + st2;
+            //1, 2,3,5
+            st1 = st2;
+            //2, 3, 5,13
+            st2 = sum;
+
+            document.write(st2 + " ");
+
+            dem++;
+
+        }
+
+
+    </script>
+</body>
+
+</html>
