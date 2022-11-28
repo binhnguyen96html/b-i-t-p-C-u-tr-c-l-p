@@ -47,26 +47,39 @@
 
 
         //BAI 3, BAI 5
-        let st1 = 0;
-        let st2 = 1;
-        let sum = 0;
+        // let st1 = 0;
+        // let st2 = 1;
+        // let sum = 0;
+        // let n = 0;
+        // let total = 0;
+        // document.write(st1 + " " + "<br>");
+        // document.write(st2 + " " + "<br>");
+
+        // while (n < 18) {
+        //     //1+1, 1+2, 2+3,5+3
+        //     sum = st1 + st2;
+        //     //1, 2,3,5
+        //     st1 = st2;
+        //     //2, 3, 5,13
+        //     st2 = sum;
+        //     n++;
+        //     total += st2;
+        //     document.write(st2 + '<br>');
+        // }
+        // document.write("<br> Tong 20 fibonacci dau tien: " + total);
+
+
+        //BAI 6
         let n = 0;
         let total = 0;
-        document.write(st1 + " " + "<br>");
-        document.write(st2 + " " + "<br>");
 
-        while (n < 18) {
-            //1+1, 1+2, 2+3,5+3
-            sum = st1 + st2;
-            //1, 2,3,5
-            st1 = st2;
-            //2, 3, 5,13
-            st2 = sum;
-            n++;
-            total += st2;
-            document.write(st2 + '<br>');
-        }
-        document.write("<br> Tong 20 fibonacci dau tien: " + total);
+       for(let i = 0; n < 30; i++){
+            if(i % 7 == 0){
+                total += i;
+                n++;
+            }
+       }
+       document.write(total);
 
 
     </script>
